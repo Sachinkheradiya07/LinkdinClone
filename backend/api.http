@@ -1,0 +1,53 @@
+curl -X POST http://localhost:8080/register \
+-H "Content-Type: application/json" \
+-d '{
+    "userName": "sachin123",
+    "password": "sachin123",
+    "email": "sachin01@gmail.com",
+    "name": "sachin"
+}'
+
+###
+curl -X POST http://localhost:8080/login \
+-H "Content-Type: application/json" \
+-d '{
+    "email": "sachin01@gmail.com",
+    "password": "sachin123"
+}'
+
+###
+curl -X GET http://localhost:8080/get_user_and_profile \
+-H "Content-Type: application/json" \
+-d '{
+    "token": "48726f793c770cd475decd05e523c67e2ba3a1daca86fb397380ec0a81717c33"
+}'
+
+
+###
+
+curl -X POST http://localhost:8080/user/update_profile_data \
+-H "Content-Type: application/json" \
+-d '{
+    "token": "94d99431a667562af28e35933a2d0cdf67eadbf4bf856e7dd6dd4942f498d7a1",
+    "bio": "Software Developer at XYZ",
+    "currentPost": "Full-stack Developer",
+    "pastWork": [
+        {
+            "company": "crickter",
+            "position": "CTO",
+            "years": "2+"
+        }
+    ],
+    "Education": [
+        {
+            "school": "9th",
+            "degree": "NA",
+            "fieldOfStudy": "Computer Science",
+            "years": "2015-2018"
+        }
+    ]
+}'
+###
+curl -X GET  http://localhost:8080/user/get_all_users \
+
+###
