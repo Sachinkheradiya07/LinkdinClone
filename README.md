@@ -1,2 +1,0 @@
-# LinkdinClone
-LinkdinClone
